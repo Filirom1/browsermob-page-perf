@@ -1,7 +1,20 @@
-This project requires Maven 2.2+.
+HTML to HAR
+===========
+Return the Http Archive Specification of an HTML WebPage.
 
-To build, copy settings.xml to ~/.m2/settings.xml and then run "mvn"
 
-Once done, find the zip file in release/target and unzip it. That
-is the full release of this project and includes additional
-instructions on how to run the project.
+Usage in a shell
+________________
+java -jar html2har-1.0.0.jar http://google.fr > har.txt
+
+
+Usage as a Java API
+___________________
+String har = new Html2Har().toHar("http://google.fr");
+assert(har.contains("google")==true);
+
+
+More info
+_________
+http://www.softwareishard.com/blog/firebug/http-archive-specification/
+http://groups.google.com/group/http-archive-specification/web/har-1-2-spec?pli=1
