@@ -26,7 +26,7 @@ public class FirefoxHtml2HarDriver extends FirefoxDriver {
     private static FirefoxProfile tweakProfile(FirefoxProfile profile) {
         try {
             /* Load FileFox plugins */
-            profile.addExtension(FirefoxProfile.class, "/firebug-1.6X.0a7.xpi");
+            profile.addExtension(FirefoxProfile.class, "/firebug-1.5.4.xpi");
             profile.addExtension(FirefoxProfile.class, "/netExport-0.7b13-mob.xpi");
             profile.addExtension(FirefoxProfile.class, "/fireStarter-0.1.a5.xpi");
 
@@ -42,6 +42,7 @@ public class FirefoxHtml2HarDriver extends FirefoxDriver {
             profile.setPreference("extensions.firebug.defaultPanelName", "net");
             profile.setPreference("extensions.firebug.net.enableSites", true);
             profile.setPreference("extensions.firebug.previousPlacement", 1);
+            profile.setPreference("extensions.firebug.allPagesActivation", "on");
 
             /* Set preferences for netExport*/
             profile.setPreference("extensions.firebug.netexport.autoExportActive", true);
